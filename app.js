@@ -4,17 +4,17 @@ function sortear(){
     let quantidade = document.getElementById('quantidade').value; 
     let de = document.getElementById('de').value; 
     let ate = document.getElementById('ate').value;
-    let intervalo = ate - de + 1 
-
-    if (intervalo < quantidade){
-        alert('Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!')
-        return;    
-    }
-
+    
     if(de >= ate) {
         alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
         return;
     } 
+
+    let intervalo = ate - de + 1 
+    if (intervalo < quantidade){
+        alert('Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!')
+        return;    
+    }
 
     let sorteados = [];
     let numero;
